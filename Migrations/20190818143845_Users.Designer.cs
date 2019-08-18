@@ -9,8 +9,8 @@ using Questioner_CSharp.Models;
 namespace Questioner_CSharp.Migrations
 {
     [DbContext(typeof(QuestionerContext))]
-    [Migration("20190818103842_initial")]
-    partial class initial
+    [Migration("20190818143845_Users")]
+    partial class Users
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

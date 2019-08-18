@@ -3,7 +3,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace Questioner_CSharp.Migrations
 {
-    public partial class initial : Migration
+    public partial class Users : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -13,8 +13,14 @@ namespace Questioner_CSharp.Migrations
                 {
                     Id = table.Column<long>(nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.SerialColumn),
-                    Name = table.Column<string>(nullable: true),
-                    IsComplete = table.Column<bool>(nullable: false)
+                    FirstName = table.Column<string>(nullable: true),
+                    LastName = table.Column<string>(nullable: true),
+                    OtherName = table.Column<string>(nullable: true),
+                    Email = table.Column<string>(nullable: false),
+                    PhoneNumber = table.Column<string>(nullable: true),
+                    UserName = table.Column<string>(nullable: false),
+                    Registered = table.Column<string>(nullable: false),
+                    IsAdmin = table.Column<bool>(nullable: false)
                 },
                 constraints: table =>
                 {
